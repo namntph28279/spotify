@@ -4,6 +4,7 @@ import 'package:spotify/common/widgets/button/basic_app_button.dart';
 import 'package:spotify/core/assets/app_images.dart';
 import 'package:spotify/core/assets/app_vector.dart';
 import 'package:spotify/core/configs/theme/app_colors.dart';
+import 'package:spotify/presentation/choose_mode/pages/choose_mode.dart';
 
 class GetStartedPage extends StatelessWidget {
   const GetStartedPage({super.key});
@@ -26,21 +27,32 @@ class GetStartedPage extends StatelessWidget {
                 fit: BoxFit.fill,
               )
             ),
+          ),
+
+          Container(
+            color: Colors.black.withOpacity(0.15),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 40,
+              vertical: 40
+            ),
             child: Column(
               children: [
                 Align(
                   child: SvgPicture.asset(
-                    AppVectors.logo
+                      AppVectors.logo
                   ),
                   alignment: Alignment.center,
                 ),
                 Spacer(),
                 Text(
-                    'Enjoy Listening To Music',
+                  'Enjoy Listening To Music',
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    fontSize: 18
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 18
                   ),
                 ),
                 SizedBox(height: 21,),
@@ -57,15 +69,18 @@ class GetStartedPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20,),
                 BasicAppButton(
-                    onPressed: () {},
-                    title: 'Get Started',
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext builder) => const ChooseModePage()
+                        )
+                    );
+                  },
+                  title: 'Get Started',
                 )
               ],
             ),
-          ),
-
-          Container(
-            color: Colors.black.withOpacity(0.15),
           )
         ],
       ),
