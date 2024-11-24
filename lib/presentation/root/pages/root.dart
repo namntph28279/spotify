@@ -5,6 +5,8 @@ class RootPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Text('Root page', style: TextStyle(color: Colors.black),),
+    );
   }
 }

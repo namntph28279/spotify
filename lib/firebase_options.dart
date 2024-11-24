@@ -43,7 +43,7 @@ class DefaultFirebaseOptions {
     appId: '1:630759517423:android:6da0aee93d316c48e8bf1a',
     messagingSenderId: '630759517423',
     projectId: 'spotify-a744a',
-    storageBucket: 'com.example.spotify',
+    storageBucket: 'spotify-a744a.firebasestorage.app',
   );
 
 }

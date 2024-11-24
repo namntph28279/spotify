@@ -17,4 +17,8 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 =======
 # spotify
+# Lưu ý: trong phiên ban mới của flutter thì cần khai báo ở file android/settings.gradle 
+# thay vì android/build.gradle
+#
+#
 >>>>>>> e0bf13ba2ef625fb34b2b2bfeb7ef998856b2d2c
