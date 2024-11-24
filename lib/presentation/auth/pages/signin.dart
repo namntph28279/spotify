@@ -18,26 +18,28 @@ class SigninPage extends StatelessWidget {
           width: 40,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-            horizontal: 30,
-            vertical: 50
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            _signinText(),
-            const SizedBox(height: 50,),
-            _emailField(context),
-            const SizedBox(height: 20,),
-            _passwordField(context),
-            const SizedBox(height: 20,),
-            BasicAppButton(
-                onPressed: () {
-                },
-                title: 'Sign In'
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+              horizontal: 30,
+              vertical: 50
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _signinText(),
+              const SizedBox(height: 50,),
+              _emailField(context),
+              const SizedBox(height: 20,),
+              _passwordField(context),
+              const SizedBox(height: 20,),
+              BasicAppButton(
+                  onPressed: () {
+                  },
+                  title: 'Sign In'
+              )
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: _signupText(context),
